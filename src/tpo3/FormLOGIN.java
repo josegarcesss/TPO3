@@ -48,11 +48,12 @@ public class FormLOGIN extends javax.swing.JFrame {
         setTitle("TPO3");
         setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
 
+        jLabel1.setBackground(new java.awt.Color(51, 255, 255));
         jLabel1.setFont(new java.awt.Font("Microsoft PhagsPa", 0, 48)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Login");
 
-        registrarbt.setIcon(new javax.swing.ImageIcon("C:\\Users\\Thomas\\Documents\\GitHub\\TPO3\\add_one_button_insert_plus_icon_155856.png")); // NOI18N
+        registrarbt.setBackground(new java.awt.Color(102, 255, 255));
         registrarbt.setText("Registrar");
         registrarbt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,8 +80,10 @@ public class FormLOGIN extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setBackground(new java.awt.Color(51, 255, 255));
         jLabel3.setText("Email");
 
+        jLabel4.setBackground(new java.awt.Color(0, 255, 255));
         jLabel4.setText("Contraseña");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -102,7 +105,7 @@ public class FormLOGIN extends javax.swing.JFrame {
                             .addComponent(contra, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(mail, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(206, 206, 206)
+                        .addGap(215, 215, 215)
                         .addComponent(registrarbt)))
                 .addGap(209, 209, 209))
         );
@@ -118,9 +121,9 @@ public class FormLOGIN extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(contra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(registrarbt)
-                .addGap(15, 15, 15))
+                .addGap(16, 16, 16))
         );
 
         pack();
