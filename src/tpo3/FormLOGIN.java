@@ -26,21 +26,93 @@ public class FormLOGIN extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jtext1 = new javax.swing.JTextField();
+        jpw1 = new javax.swing.JPasswordField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("TPO3");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+
+        jLabel1.setFont(new java.awt.Font("Microsoft PhagsPa", 0, 48)); // NOI18N
+        jLabel1.setText("Login");
+
+        jtext1.setText("Ingrese su Email");
+        jtext1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jtext1FocusGained(evt);
+            }
+        });
+        jtext1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtext1ActionPerformed(evt);
+            }
+        });
+
+        jpw1.setText("jPasswordField1");
+        jpw1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jpw1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jpw1FocusLost(evt);
+            }
+        });
+        jpw1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jpw1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(195, 195, 195)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(183, 183, 183)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jtext1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(jpw1))))
+                .addContainerGap(217, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(69, 69, 69)
+                .addComponent(jtext1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55)
+                .addComponent(jpw1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(163, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jtext1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtext1ActionPerformed
+          jtext1.setText("");
+    }//GEN-LAST:event_jtext1ActionPerformed
+
+    private void jtext1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtext1FocusGained
+      
+    }//GEN-LAST:event_jtext1FocusGained
+
+    private void jpw1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jpw1FocusGained
+        jpw1.setText("");
+    }//GEN-LAST:event_jpw1FocusGained
+
+    private void jpw1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpw1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jpw1ActionPerformed
+
+    private void jpw1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jpw1FocusLost
+    }//GEN-LAST:event_jpw1FocusLost
 
     /**
      * @param args the command line arguments
@@ -78,5 +150,8 @@ public class FormLOGIN extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPasswordField jpw1;
+    private javax.swing.JTextField jtext1;
     // End of variables declaration//GEN-END:variables
 }
