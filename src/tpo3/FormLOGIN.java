@@ -4,6 +4,8 @@
  */
 package tpo3;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Alakyan
@@ -26,41 +28,41 @@ public class FormLOGIN extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
-        jtext1 = new javax.swing.JTextField();
-        jpw1 = new javax.swing.JPasswordField();
+        registrarbt = new javax.swing.JButton();
+        mail = new javax.swing.JTextField();
+        contra = new javax.swing.JTextField();
+
+        jLabel2.setText("jLabel2");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TPO3");
         setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Microsoft PhagsPa", 0, 48)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Login");
 
-        jtext1.setText("Ingrese su Email");
-        jtext1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jtext1FocusGained(evt);
-            }
-        });
-        jtext1.addActionListener(new java.awt.event.ActionListener() {
+        registrarbt.setText("Registrar");
+        registrarbt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtext1ActionPerformed(evt);
+                registrarbtActionPerformed(evt);
             }
         });
 
-        jpw1.setText("jPasswordField1");
-        jpw1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jpw1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jpw1FocusLost(evt);
-            }
-        });
-        jpw1.addActionListener(new java.awt.event.ActionListener() {
+        mail.setText("Email");
+
+        contra.setText("Contraseña");
+        contra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jpw1ActionPerformed(evt);
+                contraActionPerformed(evt);
             }
         });
 
@@ -71,49 +73,47 @@ public class FormLOGIN extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(195, 195, 195)
-                        .addComponent(jLabel1))
+                        .addGap(215, 215, 215)
+                        .addComponent(registrarbt))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(183, 183, 183)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtext1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                            .addComponent(jpw1))))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(mail)
+                            .addComponent(contra))))
                 .addContainerGap(217, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(69, 69, 69)
-                .addComponent(jtext1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addComponent(jpw1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addGap(75, 75, 75)
+                .addComponent(mail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(contra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(registrarbt)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtext1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtext1ActionPerformed
-          jtext1.setText("");
-    }//GEN-LAST:event_jtext1ActionPerformed
+    private void registrarbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarbtActionPerformed
+        String email=mail.getText();
+        String contras=contra.getText();
+    if (email.equals("alumno@ulp.edu.ar") && contras.equals("12345678")) {
+        JOptionPane.showMessageDialog(this, "¡Bienvenido!");
+    } else {
+        JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos");
+    }
+  // TODO add your handling code here:
+    }//GEN-LAST:event_registrarbtActionPerformed
 
-    private void jtext1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtext1FocusGained
-      
-    }//GEN-LAST:event_jtext1FocusGained
-
-    private void jpw1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jpw1FocusGained
-        jpw1.setText("");
-    }//GEN-LAST:event_jpw1FocusGained
-
-    private void jpw1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpw1ActionPerformed
+    private void contraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jpw1ActionPerformed
-
-    private void jpw1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jpw1FocusLost
-    }//GEN-LAST:event_jpw1FocusLost
-
+    }//GEN-LAST:event_contraActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -150,8 +150,12 @@ public class FormLOGIN extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField contra;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPasswordField jpw1;
-    private javax.swing.JTextField jtext1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField mail;
+    private javax.swing.JButton registrarbt;
     // End of variables declaration//GEN-END:variables
 }
